@@ -6,62 +6,60 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 // TODO: Add and configure workbox plugins for a service worker and manifest file.
 // TODO: Add CSS loaders and babel to webpack.
 
+
 module.exports = () => {
   return {
-    mode: 'development',
+    mode:'development',
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
+      editor: './src/js/editor.js',
     },
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // Generate HTML files for your bundles
-      new HtmlWebpackPlugin({
-        template: './src/index.html',
-        chunks: ['main'],
-      }),
-      new HtmlWebpackPlugin({
-        template: './src/install.html',
-        filename: 'install.html',
-        chunks: ['install'],
+      new HtmlWebpackPlugin ({
+        template: './index.html',
+        title: 'ezText Editor'
       }),
 
-      // Generate a Web App Manifest file
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
+
       new WebpackPwaManifest({
-        name: 'Your App',
-        short_name: 'App',
-        description: 'Your app description',
-        background_color: '#ffffff',
+        fingerprints: false,
+        inject: true,
+        name: 'ezText Editor',
+        short_name: 'ezText',
+        description: 'Just A Humble Text Editor',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
+        start_url: './',
+        publicPath: './',
         icons: [
           {
-            src: path.resolve('src/images/icon.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
         ],
       }),
-
-      // Inject the Workbox service worker into the build
-      new InjectManifest({
-        swSrc: './src/service-worker.js',
-      }),
     ],
-
     module: {
+      // CSS loaders
       rules: [
-        // Configure CSS loaders
         {
-          test: /\.css$/,
+          test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
-
-        // Configure Babel loader
         {
-          test: /\.js$/,
+          test: /\.m?js$/,
           exclude: /node_modules/,
+          // We use babel-loader in order to use ES6.
           use: {
             loader: 'babel-loader',
             options: {
@@ -71,5 +69,5 @@ module.exports = () => {
         },
       ],
     },
-  };
-};
+  }
+}
