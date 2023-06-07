@@ -24,12 +24,20 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
-registerRoute(({ request }) =>['style', 'script', 'worker'].includes(request.mode === 'navigate', pageCache),
-new CacheFirst({
-  cacheName: 'asset-cache',
-  plugins: [
-    new CacheableResponsePlugin({
-      statuses: [0, 200],
+registerRoute(
+  // Specify the URLs or patterns to match
+  ({ request }) => request.destination === 'script' || request.destination === 'style' || request.destination === 'image',
+  // Specify the caching strategy
+  new CacheFirst({
+    cacheName: 'asset-cache',
+    plugins: [
+      // Configure cacheable responses
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+      // Configure cache expiration
+      new ExpirationPlugin({
+        maxAgeSeconds: 30 * 24 * 60 * 60, // Cache for 30 days
       }),
     ],
   })
