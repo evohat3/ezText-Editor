@@ -1,142 +1,138 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+ 
+# ezText-Editor
+---
+---
+## Table of Contents 
+      
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [Features](#features)
+  * [How to Contribute](#how-to-contribute)
+  * [Tests](#tests)
+  * [License](#license)
+      
+    
 
-## Your Task
+  ![alt text](https://img.shields.io/badge/Badge-MIT%20LICENSE-brightgreen)   ![alt text](https://img.shields.io/github/last-commit/evohat3/ezText-Editor)   [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+---
+---
+## Description
+---
+---
+      
+          What was the motivation for building this project?
+          - to learn how to optimize code using PWA standards
+      
+      
+          why did you build this project?
+          - to learn what happens behind the scenes with webpack
+      
+      
+          what problem does your project solve?
+          - it makes a downloadable app that is a text editor
+      
+      
+          what did you learn in the building process?
+          - progressive web applications
+      
 
-You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+      
+## Installation
+  ---
+  ---      
+  
+      How to install
+  
+      - Step 1: clone repo
+      
+      - Step 2: open terminal to the client folder and type npm install
+      
+      - Step 3: use script npm run build to build dist folder, or npm run start to start the server
+      
+      
 
-## User Story
+## Usage
+---
+---      
+### *How to use*
+#### use script npm run build to build dist folder, or npm run start to start the server
+      
+![ScreenShot](https://i.imgur.com/UAO7f3h.jpg)
 
-```md
-AS A developer
-I WANT to create notes or code snippets with or without an internet connection
-SO THAT I can reliably retrieve them for later use
-```
+![ScreenShot](https://i.imgur.com/Ds6fr7E.jpg) 
 
-## Acceptance Criteria
 
-```md
-GIVEN a text editor web application
-WHEN I open my application in my editor
-THEN I should see a client server folder structure
-WHEN I run `npm run start` from the root directory
-THEN I find that my application should start up the backend and serve the client
-WHEN I run the text editor application from my terminal
-THEN I find that my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins
-THEN I find that I have a generated HTML file, service worker, and a manifest file
-WHEN I use next-gen JavaScript in my application
-THEN I find that the text editor still functions in the browser without errors
-WHEN I open the text editor
-THEN I find that IndexedDB has immediately created a database storage
-WHEN I enter content and subsequently click off of the DOM window
-THEN I find that the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it
-THEN I find that the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button
-THEN I download my web application as an icon on my desktop
-WHEN I load my web application
-THEN I should have a registered service worker using workbox
-WHEN I register a service worker
-THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Heroku
-THEN I should have proper build scripts for a webpack application
-```
 
-## Mock-Up
+## Credits
+---
+---     
+Github Repo
+* [evohat3](https://github.com/evohat3)
 
-The following animation demonstrates the application functionality:
+Collaborators
+* n/a
+      
+Tech
+* webpack and babel
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+## Features
+---
+---
+ * easy to install!
+  
+ * easy to use!
+  
+ * easy text editor!
 
-The following image shows the application's `manifest.json` file:
+## How to Contribute
+---
+---     
+ *  n/a     
 
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
+## Tests
+---
+---
+* run the build and open the index html in the dist folder
 
-The following image shows the application's registered service worker:
+##  Questions
+---
+---
 
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
+contact me at - n/a
+   
+  
+## License 
+---
+---    
 
-The following image shows the application's IndexedDB storage:
+  *  [MIT LINK](https://choosealicense.com/licenses/mit/)
 
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+    
+MIT License
 
-## Grading Requirements
+Copyright (c) [year] [fullname]
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-This Challenge is graded based on the following criteria:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-### Technical Acceptance Criteria: 40%
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-* Satisfies all of the above acceptance criteria plus the following:
 
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
-
-  * The application works without an internet connection
-
-  * Automatically saves content inside the text editor when the DOM window is unfocused
-
-  * Bundled with webpack
-
-  * Create a service worker with workbox that Caches static assets
-
-  * The application should use babel in order to use async / await
-
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
-
-  * Can be installed as a Progressive Web Application
-
-### Deployment: 32%
-
-* Application deployed to Heroku at live URL with build scripts
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
